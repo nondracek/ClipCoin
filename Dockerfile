@@ -29,7 +29,7 @@ RUN make
 RUN make install
                                                                                                             
 #open service port
-EXPOSE 9332 9333 19332 19333 19444
+EXPOSE 9666 19666
 
 CMD ["clipcoind", "--printtoconsole"]
 
