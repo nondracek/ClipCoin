@@ -126,11 +126,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x34817454ef6bc499a7ca890aca6ec14b61b48efec8019bfccfcd7fca515cf3f1"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("seed-a.clipcoin.loshan.co.uk");
-        vSeeds.emplace_back("dnsseed.thrasher.io");
-        vSeeds.emplace_back("dnsseed.clipcointools.com");
-        vSeeds.emplace_back("dnsseed.clipcoinpool.org");
-        vSeeds.emplace_back("dnsseed.koin-project.com");
+        // vSeeds.emplace_back("seed-a.clipcoin.loshan.co.uk");
+        // vSeeds.emplace_back("dnsseed.thrasher.io");
+        // vSeeds.emplace_back("dnsseed.clipcointools.com");
+        // vSeeds.emplace_back("dnsseed.clipcoinpool.org");
+        // vSeeds.emplace_back("dnsseed.koin-project.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,33);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -193,7 +193,10 @@ public:
         consensus.BIP65Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.BIP66Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
+        
+        // consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
+        consensus.nPowTargetTimespan = 2.0 * 24 * 60 * 60; // 3.5 days
+
         consensus.nPowTargetSpacing = 2.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
