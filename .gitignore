@@ -1,5 +1,5 @@
 *.tar.gz
-
+*.pem
 *.exe
 src/clipcoin
 src/clipcoind
